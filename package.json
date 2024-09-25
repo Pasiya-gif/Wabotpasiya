@@ -1,15 +1,15 @@
 {
-  "name": " pasiyabot",
+  "name": "Pasiya-MD",
   "version": "1.0.0",
-  "description": "pasiyabot WhatsApp bot created using Node.js",
+  "description": "WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name pasiyabot",
-    "stop": "pm2 stop pasiyabot",
-    "restart": "pm2 restart pasiyabot"
+    "start": "pm2 start index.js --deep-monitoring --attach --name pasibot",
+    "stop": "pm2 stop pasibot",
+    "restart": "pm2 restart pasibot"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "6.6.0",
+    "@whiskeysockets/baileys": "6.7.7",
     "@adiwajshing/keyed-db": "^0.2.4",
     "pino": "^7.0.5",
     "pm2": "^5.2.0",
