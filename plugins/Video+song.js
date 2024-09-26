@@ -24,7 +24,7 @@ ago: s{data.ago}
 viwes: s{data.viwes}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
-await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
                         
   //download audio
 
@@ -32,14 +32,14 @@ let down = await fg.yta(url)
 let downloadurl = down.dl_url
 
 //send audio+document message 
-await conn.sendmassege(from,{audio:{url:downloadurl},{qouted:mek})
-await conn.sendmassege(from,{document:{url:downloadurl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+await conn.sendMessage(from,{audio:{url:downloadurl},mimetype: "audio/mpeg"},{qouted:mek})
+await conn.sendMessage(from,{document:{url:downloadurl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
 
   
   
 }catch(e){
-  consol.log(e)
-reply('s'{e})
+console.log(e)
+reply(`${e}`)
 }
 })
 
@@ -66,7 +66,7 @@ ago: s{data.ago}
 viwes: s{data.viwes}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
-await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
 
 //download video 
 
@@ -75,13 +75,13 @@ let downloadurl = down.dl_url
 
 //send video+document message 
     
-await conn.sendmassege(from,{video:{url:downloadurl},mimetype:"video/mp4",{qouted:mek})
-await conn.sendmassege(from,{document:{url:downloadurl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+await conn.sendMassage(from,{video:{url:downloadurl},mimetype:"video/mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+await conn.sendMassage(from,{document:{url:downloadurl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
 
   
   
 }catch(e){
-  consol.log(e)
-reply('s'{e})
+console.log(e)
+reply(`${e}`)
 }
 })
