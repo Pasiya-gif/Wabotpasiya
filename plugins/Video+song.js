@@ -13,7 +13,7 @@ try{
     
 if(!q) return reply("please give me url or title")
 const search =  await yts(q)
-const deta = search.vidios[0]
+const deta = search.videos[0]
 const url = data.url
 let desc = `
 🫵 * 𝙮𝙤𝙪𝙧 𝙨𝙤𝙣𝙜 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙 * ❤️ = 👉⬇️👈
@@ -55,7 +55,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 if(!q) return reply("please give me url or title")
 const search =  await yts(q)
-const deta = search.vidios[0]
+const deta = search.videos[0]
 const url = data.url
 let desc = `
 🫵 * 𝙮𝙤𝙪𝙧 𝙫𝙞𝙙𝙚𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙 * ❤️ = 👉⬇️👈
