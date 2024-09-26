@@ -21,7 +21,7 @@ title: ${data.title}
 description ${data.description}
 time: ${data.timestamp}
 ago: ${data.ago}
-viwes: ${data.viwes}
+views: ${data.views}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
@@ -63,7 +63,7 @@ title: ${data.title}
 description ${data.description}
 time: ${data.timestamp}
 ago: ${data.ago}
-viwes: ${data.viwes}
+views: ${data.views}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
