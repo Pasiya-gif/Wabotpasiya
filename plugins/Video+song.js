@@ -24,7 +24,7 @@ ago: s{data.ago}
 viwes: s{data.viwes}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
-await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek}):
+await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
                         
   //download audio
 
@@ -66,7 +66,7 @@ ago: s{data.ago}
 viwes: s{data.viwes}
 MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
-await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek}):
+await conn.sendmessege(frome,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
 
 //download video 
 
