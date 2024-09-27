@@ -42,7 +42,11 @@ async function connectToWA() {
 console.log("Connecting wa bot 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
-
+//========connect mongodb============
+const connectDB = requer('./lib/mongodb')
+connectDB():
+        
+//=====================================
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
         printQRInTerminal: false,
