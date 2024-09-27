@@ -47,7 +47,7 @@ ${menu.convert}
 ${menu.search} 
 POWERD BY 👉♥️𝙥𝙖𝙨𝙞𝙮𝙖♥️👈
 ,
-await conn.sendMessage(from,{texst:madeMenu},{quote:mek})
+await conn.sendMessage(from,{image:{url:"<a href="https://imgbb.com/"><img src="https://i.ibb.co/WV05mGB/Text-Art-240927130558.jpg" alt="Text-Art-240927130558" border="0"></a>"}}madeMenu},caption:madeManu},{quote:mek})
   
 }cach(e){
 console.log(e)
