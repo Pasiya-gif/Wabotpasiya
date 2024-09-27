@@ -17,7 +17,6 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = '.'
 
 const ownerNumber = ['94764465694']
 
@@ -45,8 +44,12 @@ var { version } = await fetchLatestBaileysVersion()
 //========connect mongodb============
 const connectDB = requer('./lib/mongodb')
 connectDB():
-        
 //=====================================
+const {readEnv} = require('./lib/database')
+const config = await readEnv():
+const prefix = config.PREFIX
+//=====================================
+
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
         printQRInTerminal: false,
