@@ -141,8 +141,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               }
             }
 
-if(senderNumber.includes("94764465694")){
-if(!config.OWNER_REACT == "true") return
+if(senderNumber.includes("94764465694") && config.OWNER_REACT == "true"){
 if(isReact) return
 m.react(config.R_EMOJI)
 }
