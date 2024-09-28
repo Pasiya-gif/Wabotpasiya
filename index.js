@@ -46,7 +46,7 @@ const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info
 var { version } = await fetchLatestBaileysVersion()
 //========connect mongodb============
 const connectDB = requer('./lib/mongodb')
-connectDB():
+ConnectDB();
 //=====================================
 const {readEnv} = require('./lib/database')
 const config = await readEnv():
