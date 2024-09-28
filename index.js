@@ -49,7 +49,7 @@ const connectDB = requer('./lib/mongodb')
 ConnectDB();
 //=====================================
 const {readEnv} = require('./lib/database')
-const config = await readEnv():
+const config = await readEnv();
 const prefix = config.PREFIX
 //=====================================
 
