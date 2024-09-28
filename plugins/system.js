@@ -1,11 +1,11 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
 const os = requrie('os') 
-const {runtime} = require('../lib/functions) 
+const {runtime} = require('../lib/functions)
+
 cmd({
     pattern: "system",
     alias:["status","botinfo"],
-    "check up time , ram usage and more "
     desc: "Check bot online or no.",
     category: "main",
     filename: __filename
@@ -17,11 +17,11 @@ let status = `*Uptime:*  ${runtime(process.uptime())}
 *HostName:* ${os.hostname()}
 *Owner:* Prabath Kumara & ᏢᎪՏᏆᎽᎪ ᏴϴᎽ
 `
-return reply('${status}')
+return reply(`${status}`)
 
 
-}cach(e){
+}catch(e){
 console.log(e)
-reply('${e}')
+reply(`${e}`)
 }
 })
