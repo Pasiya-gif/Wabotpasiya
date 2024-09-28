@@ -155,7 +155,7 @@ m.react("💓")
  }
         
 //=======================WORK-type===================================================== 
-if(!isowener && config.MODE === "private" return 
+if(!isOwner && config.MODE === "private") return
 if(!isowener && is group && config.MODE === "inbox") return
 if(!isowener && !isgruop && config.MODE ===  "group") return 
 //===============================================
