@@ -9,7 +9,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-const config = await readEnv():
+const config = await readEnv();
 let menu = {
 main: '',
 download: '',
@@ -17,7 +17,7 @@ group: '',
 owner: '',
 convert: '',
 search: '',
-}:
+};
 
 for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
@@ -25,7 +25,7 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = '👋 *🇭 🇪 🇱 🇱 🇴*'${pushname}*'
+let madeMenu = `👋 *🇭 🇪 🇱 🇱 🇴*'${pushname}*'
 >  *DOWNLOAD COMANDS* ⬇️
 ${menu.download}
 
@@ -47,10 +47,11 @@ ${menu.convert}
 
 ${menu.search} 
 POWERD BY 👉♥️𝙥𝙖𝙨𝙞𝙮𝙖♥️👈
-,
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG,caption:madeManu},{quote:mek})
+`
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeManu},{quote:mek})
   
-}cach(e){
+}catch(e){
 console.log(e)
-reply('${e}')
+reply(`${e}`)
 }
+})
