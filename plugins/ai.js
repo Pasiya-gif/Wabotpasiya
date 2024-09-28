@@ -12,8 +12,8 @@ try{
 
 let data = await fetchjson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
 return reply(`${data.data}`)
-}cach(e){
+}catch(e){
 console.log(e)
-reply('${e}')
+reply(`${e}`)
 }
 })
