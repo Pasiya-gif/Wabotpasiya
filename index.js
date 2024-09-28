@@ -156,8 +156,9 @@ m.react("💓")
         
 //=======================WORK-type===================================================== 
 if(!isOwner && config.MODE === "private") return
-if(!isowener && is group && config.MODE === "inbox") return
-if(!isowener && !isgruop && config.MODE ===  "group") return 
+if (!isOwner && isGroup && config.MODE === "inbox") return
+if (!isOwner && !isGroup && config.MODE === "groups") return
+
 //===============================================
 
 const events = require('./command')
