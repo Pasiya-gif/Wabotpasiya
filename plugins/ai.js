@@ -34,7 +34,7 @@ if(!q) return reply("Give Text")
 
 await m.react("🖼️")
 const aiimg = `https://image.pollinations.ai/prompt/${q}?width=1024&height=1024&seed=42&nologo=True`
-await conn.sendMessage(from,{image: {url: aiimg},caption: botwatermark},{quoted: mek})
+await conn.sendMessage(from,{image: {url: aiimg},caption: `*ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ᴘᴀꜱɪʏᴀ ʙᴏᴛ*`},{quoted: mek})
     
 }catch(e){
 console.log(e)
