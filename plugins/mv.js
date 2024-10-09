@@ -24,21 +24,21 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         }
 
       let movieInfo = `
-*🏷️ Title:* ${data.Title}
-*📆 Year:* ${data.Year}
-*⭐ Rated:* ${data.Rated}
-*🗓️ Relesed:* ${data.Released}
-*⏰ Runtime:* ${data.Runtime}
-*🎭 Genre:* ${data.Genre}
-*📽️ Directors:* ${data.Director}
-*✍️ Writer:* ${data.Writer}
-*🧚‍♂️ Actors:* ${data.Actors}
-*📝 Plot:* ${data.Plot}
-*🔖 Language:* ${data.Language}
-*🌍 Country:* ${data.Country}
-*🏆 Awards:* ${data.Awards}
-*🌟 Imdb Rating:* ${data.imdbRating}
-*🗃️ Imdb Votes:* ${data.imdbVotes}`;
+*Title:* ${data.Title}
+*Year:* ${data.Year}
+*Rated:* ${data.Rated}
+*Relesed:* ${data.Released}
+*Runtime:* ${data.Runtime}
+*Genre:* ${data.Genre}
+*Directors:* ${data.Director}
+*Writer:* ${data.Writer}
+*Actors:* ${data.Actors}
+*Plot:* ${data.Plot}
+*Language:* ${data.Language}
+*Country:* ${data.Country}
+*Awards:* ${data.Awards}
+*Imdb Rating:* ${data.imdbRating}
+*Imdb Votes:* ${data.imdbVotes}`;
 
         const moviePic = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
         await conn.sendMessage(from,{image:{url: moviePic},caption: movieInfo},{quoted:mek})
