@@ -3,7 +3,7 @@ const { cmd } = require('../command');
 const config = require('../config');
 
 cmd({
-    pattern: "movie",
+    pattern: "mv",
     desc: "Get information about a movie.",
     category: "search",
     filename: __filename
