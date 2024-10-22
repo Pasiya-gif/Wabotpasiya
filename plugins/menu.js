@@ -25,7 +25,7 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `👋 *🇭 🇪 🇱 🇱 🇴*'${pushname}*'
+let madeMenu = `👋 *🇭 🇪 🇱 🇱 🇴* ${pushname}
 >  *DOWNLOAD COMANDS* ⬇️
 ${menu.download}
 
@@ -48,7 +48,7 @@ ${menu.convert}
 ${menu.search} 
 POWERD BY 👉♥️𝙥𝙖𝙨𝙞𝙮𝙖♥️👈
 `
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeManu},{quote:mek})
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption: madeMenu},{quote:mek})
   
 }catch(e){
 console.log(e)
