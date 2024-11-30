@@ -1,5 +1,4 @@
 const {cmd , commands} = require('../command')
-const fg = require('api-dylux')
 const yts = require('yt-search')
 
 cmd({
@@ -26,14 +25,11 @@ MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
                         
-  //download audio
-
-let down = await fg.yta(url)
-let downloadurl = down.dl_url
-
-//send audio+document message 
-await conn.sendMessage(from,{audio:{url:downloadurl},mimetype: "audio/mpeg"},{qouted:mek})
-await conn.sendMessage(from,{document:{url:downloadurl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+const apiUrl = `https://api.tioo.eu.org/download/ytdl?url=` + data.url
+const response = await axios.get(apiUrl)
+const ddata = response.data
+await conn.sendMessage(from,{audio:{url: ddata.result.mp3},mimetype: "audio/mpeg"},{qouted:mek})
+await conn.sendMessage(from,{document:{url: ddata.result.mp3},mimetype:"audio/mpeg",fileName:ddata.result.title + ".mp3",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
 
   
   
@@ -68,15 +64,12 @@ MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted:mek})
 
-//download video 
-
-let down = await fg.ytv(url)
-let downloadurl = down.dl_url
-
-//send video+document message 
+const apiUrl = `https://api.tioo.eu.org/download/ytdl?url=` + data.url
+const response = await axios.get(apiUrl)
+const ddata = response.data
     
-await conn.sendMessage(from,{video:{url:downloadurl},mimetype:"video/mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
-await conn.sendMessage(from,{document:{url:downloadurl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+await conn.sendMessage(from,{video:{url: ddata.result.mp4},mimetype:"video/mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
+await conn.sendMessage(from,{document:{url: ddata.result.mp4},mimetype:"video/mp4",fileName:ddata.result.title + ".mp4",caption:"MADE BY ♥️ 👉𝙥𝙖𝙨𝙞𝙮𝙖 𝙗𝙤𝙮👈 ❗"},{qouted:mek})
 
  
 }catch(e){
