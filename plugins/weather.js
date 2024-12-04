@@ -58,7 +58,7 @@ if(!name1 || !name2 || cnames === false) {
     await m.react("❌")
     return reply("*❗ Give Two Names. Like Kegalle,Colombo. ❗*")
 }
-const apiUrl = `https://${dmdata.api.widipeapi}/jarak?dari=${name1}&ke=${name2}`
+const apiUrl = `https://api.tioo.eu.org/jarak?dari=${name1}&ke=${name2}`
 const response = await axios.get(apiUrl)
 const data = response.data
 if(data.url.status === false) {
